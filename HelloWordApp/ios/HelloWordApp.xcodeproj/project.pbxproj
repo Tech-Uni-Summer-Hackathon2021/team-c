@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		37CC15FABACE2E4513EC9531 /* libPods-HelloWordApp-HelloWordAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4DBCEBD2D3A079FE4EC521 /* libPods-HelloWordApp-HelloWordAppTests.a */; };
+		6AD1A7A06E4C771360E33733 /* libPods-HelloWordApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A842911A5E5A7FFCEC7AF661 /* libPods-HelloWordApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		E459A61524867BAF60F67CC6 /* libPods-HelloWordApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5081D553522F62F425EA3DF3 /* libPods-HelloWordApp.a */; };
-		FA7DA1986E5CE638468E632A /* libPods-HelloWordApp-HelloWordAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC73791114AA1E780F09B617 /* libPods-HelloWordApp-HelloWordAppTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +30,20 @@
 		00E356EE1AD99517003FC87E /* HelloWordAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWordAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HelloWordAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWordAppTests.m; sourceTree = "<group>"; };
+		0EE4EB24D6E5F042D95B0E8F /* Pods-HelloWordApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp.release.xcconfig"; path = "Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HelloWordApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWordApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HelloWordApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HelloWordApp/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HelloWordApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HelloWordApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = HelloWordApp/main.m; sourceTree = "<group>"; };
-		229DFC16E5161667DDE41532 /* Pods-HelloWordApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp.release.xcconfig"; path = "Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp.release.xcconfig"; sourceTree = "<group>"; };
-		317311FEA403DFB806077BEC /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp-HelloWordAppTests.release.xcconfig"; path = "Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		41ACCEBB9EEBCB012979A73D /* Pods-HelloWordApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp.debug.xcconfig"; path = "Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp.debug.xcconfig"; sourceTree = "<group>"; };
-		5081D553522F62F425EA3DF3 /* libPods-HelloWordApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWordApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1491F66B8E444ED0CFCF5EC5 /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp-HelloWordAppTests.release.xcconfig"; path = "Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2754A7096BDE38C3E7F5B995 /* Pods-HelloWordApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp.debug.xcconfig"; path = "Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7D4DBCEBD2D3A079FE4EC521 /* libPods-HelloWordApp-HelloWordAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWordApp-HelloWordAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = HelloWordApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E065AA4C48101528F34104D7 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EC73791114AA1E780F09B617 /* libPods-HelloWordApp-HelloWordAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWordApp-HelloWordAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A842911A5E5A7FFCEC7AF661 /* libPods-HelloWordApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloWordApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C411DA1E26C8024E009C2B67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "/Users/tanakaatsushi/team-c/HelloWordApp/ios/GoogleService-Info.plist"; sourceTree = "<absolute>"; };
+		EBC9B0A483FAE3B8B9119AD1 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig"; path = "Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7DA1986E5CE638468E632A /* libPods-HelloWordApp-HelloWordAppTests.a in Frameworks */,
+				37CC15FABACE2E4513EC9531 /* libPods-HelloWordApp-HelloWordAppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E459A61524867BAF60F67CC6 /* libPods-HelloWordApp.a in Frameworks */,
+				6AD1A7A06E4C771360E33733 /* libPods-HelloWordApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +90,7 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				C411DA1E26C8024E009C2B67 /* GoogleService-Info.plist */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -100,8 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5081D553522F62F425EA3DF3 /* libPods-HelloWordApp.a */,
-				EC73791114AA1E780F09B617 /* libPods-HelloWordApp-HelloWordAppTests.a */,
+				A842911A5E5A7FFCEC7AF661 /* libPods-HelloWordApp.a */,
+				7D4DBCEBD2D3A079FE4EC521 /* libPods-HelloWordApp-HelloWordAppTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,7 +123,7 @@
 				00E356EF1AD99517003FC87E /* HelloWordAppTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				DD42D3DCA76A529A6ADBE79C /* Pods */,
+				CCA1B14702F1705AB4B4F626 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -137,15 +139,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DD42D3DCA76A529A6ADBE79C /* Pods */ = {
+		CCA1B14702F1705AB4B4F626 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				41ACCEBB9EEBCB012979A73D /* Pods-HelloWordApp.debug.xcconfig */,
-				229DFC16E5161667DDE41532 /* Pods-HelloWordApp.release.xcconfig */,
-				E065AA4C48101528F34104D7 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */,
-				317311FEA403DFB806077BEC /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */,
+				2754A7096BDE38C3E7F5B995 /* Pods-HelloWordApp.debug.xcconfig */,
+				0EE4EB24D6E5F042D95B0E8F /* Pods-HelloWordApp.release.xcconfig */,
+				EBC9B0A483FAE3B8B9119AD1 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */,
+				1491F66B8E444ED0CFCF5EC5 /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,12 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "HelloWordAppTests" */;
 			buildPhases = (
-				D4FA39D21D76AA7CA9218B0A /* [CP] Check Pods Manifest.lock */,
+				370B5EC26C510A0B5CD1B309 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				FCD0C377062F8D1BE124BE19 /* [CP] Embed Pods Frameworks */,
-				F4D1802BA94CBF09C7A9FF15 /* [CP] Copy Pods Resources */,
+				2450852E128D277007C56041 /* [CP] Embed Pods Frameworks */,
+				16F69680860409ABB77205BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,14 +178,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HelloWordApp" */;
 			buildPhases = (
-				9865D89C2102B073B719ED37 /* [CP] Check Pods Manifest.lock */,
+				4678BDC520EFE05B19BB2487 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				3F36B4B7FB0F20EA1EEECA81 /* [CP] Embed Pods Frameworks */,
-				88EBECA1E78F86AA97357D38 /* [CP] Copy Pods Resources */,
+				BD5180D4643E94661A443E69 /* [CP] Embed Pods Frameworks */,
+				6C4C8A3E558BBBBF56E5DBBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,63 +266,41 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		3F36B4B7FB0F20EA1EEECA81 /* [CP] Embed Pods Frameworks */ = {
+		16F69680860409ABB77205BC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		88EBECA1E78F86AA97357D38 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9865D89C2102B073B719ED37 /* [CP] Check Pods Manifest.lock */ = {
+		2450852E128D277007C56041 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HelloWordApp-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4FA39D21D76AA7CA9218B0A /* [CP] Check Pods Manifest.lock */ = {
+		370B5EC26C510A0B5CD1B309 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -343,38 +322,60 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4D1802BA94CBF09C7A9FF15 /* [CP] Copy Pods Resources */ = {
+		4678BDC520EFE05B19BB2487 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloWordApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C4C8A3E558BBBBF56E5DBBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FCD0C377062F8D1BE124BE19 /* [CP] Embed Pods Frameworks */ = {
+		BD5180D4643E94661A443E69 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp-HelloWordAppTests/Pods-HelloWordApp-HelloWordAppTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloWordApp/Pods-HelloWordApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -429,7 +430,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E065AA4C48101528F34104D7 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */;
+			baseConfigurationReference = EBC9B0A483FAE3B8B9119AD1 /* Pods-HelloWordApp-HelloWordAppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -456,7 +457,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 317311FEA403DFB806077BEC /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */;
+			baseConfigurationReference = 1491F66B8E444ED0CFCF5EC5 /* Pods-HelloWordApp-HelloWordAppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -480,7 +481,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41ACCEBB9EEBCB012979A73D /* Pods-HelloWordApp.debug.xcconfig */;
+			baseConfigurationReference = 2754A7096BDE38C3E7F5B995 /* Pods-HelloWordApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -506,7 +507,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 229DFC16E5161667DDE41532 /* Pods-HelloWordApp.release.xcconfig */;
+			baseConfigurationReference = 0EE4EB24D6E5F042D95B0E8F /* Pods-HelloWordApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
