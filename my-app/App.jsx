@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import LogIn from './src/components/LogIn';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello</Text>
+      <LogIn />
+      <Text>Test</Text>
     </View>
   );
 }
@@ -12,6 +14,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#F0F0F0',
   },
 });
