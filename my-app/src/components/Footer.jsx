@@ -1,15 +1,31 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import { StyleSheet, View, Alert } from 'react-native';
 import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function Footer() {
+  const memberListIcon = () => { Alert.alert('MemberIcon Clicked!'); };
+  const homeIcon = () => { Alert.alert('homeIcon Clicked!'); };
+  const myPageIcon = () => { Alert.alert('myPageIcon Clicked!'); };
   return (
     <View style={styles.footer}>
-      <Ionicons name="ios-people" size={40} style={styles.iosPeopleIcon} />
-      <FontAwesome name="home" size={40} style={styles.homeIcon} />
-      <MaterialCommunityIcons name="shield-account" size={40} style={styles.shieldAccountIcon} />
+      <Ionicons
+        name="ios-people"
+        size={40}
+        style={styles.iosPeopleIcon}
+        onPress={memberListIcon}
+      />
+      <FontAwesome
+        name="home"
+        size={40}
+        style={styles.homeIcon}
+        onPress={homeIcon}
+      />
+      <MaterialCommunityIcons
+        name="shield-account"
+        size={40}
+        style={styles.shieldAccountIcon}
+        onPress={myPageIcon}
+      />
     </View>
   );
 }
