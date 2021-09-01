@@ -3,7 +3,8 @@ import {
   StyleSheet, View, Text, Button,
 } from 'react-native';
 
-export default function Page1({ navigation }) {
+export default function Page1(props) {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
       <Text style={styles.text}>KOREDAKE</Text>
