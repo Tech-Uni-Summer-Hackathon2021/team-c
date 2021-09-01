@@ -1,23 +1,39 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Appbar } from 'react-native-paper';
-import { Ionicons, FontAwesome } from '@expo/vector-icons';
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { CardStyleInterpolators, createStackNavigator } from '@react-navigation/stack';
+import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Header() {
+export default function Footer() {
   return (
-    <Appbar.Header style={styles.header}>
-      <Ionicons name="people" size={50} color="white" style={styles.peopleIcon} />
-      <FontAwesome name="home" size={50} color="white" style={styles.peopleIcon} />
-    </Appbar.Header>
+    <View style={styles.footer}>
+      <Ionicons name="ios-people" size={40} style={styles.iosPeopleIcon} />
+      <FontAwesome name="home" size={40} style={styles.homeIcon} />
+      <MaterialCommunityIcons name="shield-account" size={40} style={styles.shieldAccountIcon} />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  footer: {
+    height: 100,
+    alignItems: 'center',
+    paddingTop: 10,
+    fontSize: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingBottom: 20,
   },
-  peopleIcon: {
+  iosPeopleIcon: {
+    color: 'black',
+    paddingHorizontal: 40,
+  },
+  homeIcon: {
+    color: 'black',
     paddingHorizontal: 35,
-    paddingVertical: 10,
+  },
+  shieldAccountIcon: {
+    color: 'black',
+    paddingHorizontal: 40,
   },
 });
