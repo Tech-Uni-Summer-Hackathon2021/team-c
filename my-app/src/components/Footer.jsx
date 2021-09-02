@@ -2,8 +2,9 @@ import React from 'react';
 import { StyleSheet, View, Alert } from 'react-native';
 import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icons';
 
-export default function Footer() {
-  const memberListIcon = () => { Alert.alert('MemberIcon Clicked!'); };
+export default function Footer(props) {
+  const { navigation } = props;
+  const memberListIcon = () => { navigation.navigate('MemberList'); };
   const homeIcon = () => { Alert.alert('homeIcon Clicked!'); };
   const myPageIcon = () => { Alert.alert('myPageIcon Clicked!'); };
   return (
