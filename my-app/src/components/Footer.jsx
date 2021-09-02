@@ -4,6 +4,7 @@ import { Ionicons, FontAwesome, MaterialCommunityIcons } from '@expo/vector-icon
 
 export default function Footer(props) {
   const { navigation } = props;
+
   const memberListIcon = () => { navigation.navigate('MemberList'); };
   const homeIcon = () => { Alert.alert('homeIcon Clicked!'); };
   const myPageIcon = () => { Alert.alert('myPageIcon Clicked!'); };

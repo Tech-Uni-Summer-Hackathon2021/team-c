@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
+import Footer from '../components/Footer';
 
 export default function MyPageScreen() {
   return (
