@@ -34,7 +34,7 @@ export default function LogOutButton() {
         },
       ],
     );
-  }
+  };
 
   return (
     <TouchableOpacity onPress={handlePress} style={styles.container}>
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     paddingVertical: 4,
   },
   label: {
-    fontSize: 14,
+    fontSize: 15,
     color: 'black',
   },
 });
