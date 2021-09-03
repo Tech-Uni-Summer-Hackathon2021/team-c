@@ -4,7 +4,6 @@ import {
 } from 'react-native';
 
 import CircleButton from '../components/CircleButton';
-import { Feather } from '@expo/vector-icons';
 
 const face = require('../../assets/face.jpg');
 
