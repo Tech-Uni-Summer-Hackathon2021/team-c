@@ -46,19 +46,17 @@ export default function MainPageScreen(props) {
           </View>
         </View>
       </View>
-<<<<<<< HEAD
       <CircleButton style={{
         right: 50,
         bottom: 140,
       }}
-=======
+      />
       <CircleButton
         style={{
           right: 50,
           bottom: 130,
         }}
         onPress={() => navigation.navigate('MemberProfile')}
->>>>>>> アイコンクリックの処理
       />
       <CircleButton style={{
         right: 110,
