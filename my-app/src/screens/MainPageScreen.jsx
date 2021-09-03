@@ -126,10 +126,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     paddingRight: 10,
     borderColor: 'rgba(0,0,0,0.2)',
-<<<<<<< HEAD
     backgroundColor: '#DDDEE0',
-=======
->>>>>>> ベースの3ページ作成
     borderWidth: 1,
     borderRadius: 2,
     height: 250,
