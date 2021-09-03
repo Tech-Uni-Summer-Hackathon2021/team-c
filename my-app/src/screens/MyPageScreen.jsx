@@ -14,9 +14,6 @@ export default function MyPageScreen() {
           style={styles.face}
         />
         <Text style={styles.name}>永山 潤</Text>
-        <View style={styles.inputProfile}>
-          <TextInput>プロフィール欄</TextInput>
-        </View>
         <View style={styles.myTask}>
           <TextInput>マイタスク</TextInput>
         </View>
@@ -43,17 +40,6 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 35,
     left: 65,
-  },
-  inputProfile: {
-    borderColor: 'black',
-    borderWidth: 1,
-    marginTop: 20,
-    height: 70,
-    width: 200,
-    left: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 5,
   },
   myTask: {
     marginTop: 40,
