@@ -3,6 +3,9 @@ import {
   View, StyleSheet, Text, Image, TextInput,
 } from 'react-native';
 
+import CircleButton from '../components/CircleButton';
+import { Feather } from '@expo/vector-icons';
+
 const face = require('../../assets/face.jpg');
 
 export default function MyPageScreen() {
@@ -16,8 +19,35 @@ export default function MyPageScreen() {
         <Text style={styles.name}>永山 潤</Text>
         <View style={styles.myTask}>
           <TextInput>マイタスク</TextInput>
+          <CircleButton
+            name="edit"
+            style={{
+              right: 5,
+              top: 155,
+              width: 40,
+              height: 40,
+              backgroundColor: '#DDDEE0',
+            }}
+          />
+          <CircleButton
+            name="check-square"
+            style={{
+              right: 45,
+              top: 155,
+              width: 40,
+              height: 40,
+              backgroundColor: '#DDDEE0',
+            }}
+          />
         </View>
       </View>
+      <CircleButton
+        name="settings"
+        style={{
+          right: 10,
+          top: 15,
+        }}
+      />
     </View>
   );
 }
