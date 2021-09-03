@@ -11,8 +11,19 @@ export default function MainPageScreen() {
   return (
     <View style={styles.container}>
       <View>
+        <View style={styles.topLine}>
+          <Text>ー</Text>
+        </View>
         <Text style={styles.topHome}>ホーム</Text>
-        <Text style={styles.backHome}>Home</Text>
+        <View style={[{
+          transform: [
+            { rotateY: '50deg' },
+            { rotateZ: '-20deg' },
+          ],
+        }]}
+        >
+          <Text style={styles.backHome}>Home</Text>
+        </View>
       </View>
       <View>
         <View style={styles.taskContent}>
@@ -36,17 +47,17 @@ export default function MainPageScreen() {
       </View>
       <CircleButton style={{
         right: 50,
-        bottom: 130,
+        bottom: 140,
       }}
       />
       <CircleButton style={{
         right: 110,
-        bottom: 130,
+        bottom: 140,
       }}
       />
       <CircleButton style={{
         right: 170,
-        bottom: 130,
+        bottom: 140,
       }}
       />
       <CircleButton style={{
@@ -97,16 +108,27 @@ const styles = StyleSheet.create({
   backHome: {
     fontStyle: 'italic',
     color: '#AECED9CC',
-    bottom: 190,
+    bottom: 250,
     right: 130,
-    fontSize: 20,
+    fontSize: 30,
+    opacity: 0.7,
   },
   topHome: {
+    position: 'absolute',
     bottom: 190,
     right: 130,
     fontSize: 20,
     flexDirection: 'row',
-    backgroundColor: 'blue',
+  },
+  topLine: {
+    position: 'absolute',
+    bottom: 180,
+    fontSize: 20,
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: '#A6A9B0',
+    width: 1000,
+    right: -200,
   },
   timeLimit: {
     fontSize: 30,
