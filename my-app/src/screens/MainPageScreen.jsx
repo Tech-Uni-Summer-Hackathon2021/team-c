@@ -53,30 +53,40 @@ export default function MainPageScreen(props) {
         }}
         onPress={() => navigation.navigate('MemberProfile')}
       />
-      <CircleButton style={{
-        right: 110,
-        bottom: 140,
-      }}
+      <CircleButton
+        style={{
+          right: 110,
+          bottom: 140,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
       />
-      <CircleButton style={{
-        right: 170,
-        bottom: 140,
-      }}
+      <CircleButton
+        style={{
+          right: 170,
+          bottom: 140,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
       />
-      <CircleButton style={{
-        left: 50,
-        top: 175,
-      }}
+      <CircleButton
+        style={{
+          left: 50,
+          top: 175,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
       />
-      <CircleButton style={{
-        left: 110,
-        top: 175,
-      }}
+      <CircleButton
+        style={{
+          left: 110,
+          top: 175,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
       />
-      <CircleButton style={{
-        left: 170,
-        top: 175,
-      }}
+      <CircleButton
+        style={{
+          left: 170,
+          top: 175,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
       />
     </View>
   );
