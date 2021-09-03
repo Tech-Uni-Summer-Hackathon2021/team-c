@@ -6,9 +6,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
 
 import MemberListScreen from './src/screens/MemberListScreen';
-import MainPageScreen from './src/screens/MainPageScreen';
-import MyPageScreen from './src/screens/MyPageScreen';
 import MainPageStackScreen from './src/screens/MainPageSatckScreen';
+import MyPageStackScreen from './src/screens/MyPageStackScrenn';
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -36,7 +35,7 @@ export default function App() {
       >
         <Tab.Screen name="MemberList" component={MemberListScreen} />
         <Tab.Screen name="MainPage" component={MainPageStackScreen} />
-        <Tab.Screen name="MyPage" component={MyPageScreen} />
+        <Tab.Screen name="MyPage" component={MyPageStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
