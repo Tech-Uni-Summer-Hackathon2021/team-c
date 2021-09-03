@@ -7,7 +7,8 @@ import {
 
 import CircleButton from '../components/CircleButton';
 
-export default function MainPageScreen() {
+export default function MainPageScreen(props) {
+  const { navigation } = props;
   return (
     <View style={styles.container}>
       <View>
@@ -36,7 +37,7 @@ export default function MainPageScreen() {
             <View>
               <Text style={styles.clock}>21:00</Text>
             </View>
-            <Text style={styles.taskToday}>今日のタスク</Text>
+            <Text style={styles.taskToday}>環境構築</Text>
             <Text style={styles.timeLimit}>00:00:00</Text>
           </View>
           <View style={{ flexDirection: 'row' }}>
@@ -45,10 +46,19 @@ export default function MainPageScreen() {
           </View>
         </View>
       </View>
+<<<<<<< HEAD
       <CircleButton style={{
         right: 50,
         bottom: 140,
       }}
+=======
+      <CircleButton
+        style={{
+          right: 50,
+          bottom: 130,
+        }}
+        onPress={() => navigation.navigate('MemberProfile')}
+>>>>>>> アイコンクリックの処理
       />
       <CircleButton style={{
         right: 110,

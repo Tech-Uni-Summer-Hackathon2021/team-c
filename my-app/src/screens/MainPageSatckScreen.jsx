@@ -7,18 +7,21 @@ import { Ionicons } from '@expo/vector-icons';
 import MyPageScreen from './MyPageScreen';
 import MainPageScreen from './MainPageScreen';
 import MemberlistScreen from './MemberListScreen';
+import MemberProfileScreen from './MemberProfileScreen';
 
 const Stack = createStackNavigator();
 
 export default function MainPageStackScreen() {
   return (
-    <Stack.Navigator screenOptions={{
-      headerShown: false,
-    }}
+    <Stack.Navigator
+      initialRouteName="MainPage"
+      screenOptions={{
+        cardStyleInterpolator: CardStyleInterpolators.forNoAnimation,
+        headerShown: false,
+      }}
     >
-      <Stack.Screen name="MyPage" component={MyPageScreen} />
-      <Stack.Screen name="Mainpage" component={MainPageScreen} />
-      <Stack.Screen name="MemberList" component={MemberlistScreen} />
+      <Stack.Screen name="MainPage" component={MainPageScreen} />
+      <Stack.Screen name="MemberProfile" component={MemberProfileScreen} />
     </Stack.Navigator>
   );
 }
