@@ -9,8 +9,6 @@ import MemberListScreen from './src/screens/MemberListScreen';
 import MainPageScreen from './src/screens/MainPageScreen';
 import MyPageScreen from './src/screens/MyPageScreen';
 
-import MyPageStackScreen from './src/screens/StackScrenn';
-
 const Tab = createBottomTabNavigator();
 export default function App() {
   const TabNatigation = ({ route }) => ({
@@ -31,14 +29,13 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <MyPageStackScreen />
       <Tab.Navigator
         initialRouteName="MainPage"
         screenOptions={TabNatigation}
       >
-        <Tab.Screen name="MemberList" component={MemberListStackScreen} />
-        <Tab.Screen name="MainPage" component={MainPageStackScreen} />
-        <Tab.Screen name="MyPage" component={MyPageStackScreen} />
+        <Tab.Screen name="MemberList" component={MemberListScreen} />
+        <Tab.Screen name="MainPage" component={MainPageScreen} />
+        <Tab.Screen name="MyPage" component={MyPageScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
