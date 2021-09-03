@@ -54,7 +54,7 @@ export default function App() {
         <Stack.Screen
           name="LogIn"
           component={LogInScreen}
-          opeions={{
+          opions={{
             cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
           }}
         />
