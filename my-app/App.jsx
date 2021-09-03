@@ -8,6 +8,7 @@ import { Ionicons, AntDesign } from '@expo/vector-icons';
 import MemberListScreen from './src/screens/MemberListScreen';
 import MainPageScreen from './src/screens/MainPageScreen';
 import MyPageScreen from './src/screens/MyPageScreen';
+import MainPageStackScreen from './src/screens/MainPageSatckScreen';
 
 const Tab = createBottomTabNavigator();
 export default function App() {
@@ -34,7 +35,7 @@ export default function App() {
         screenOptions={TabNatigation}
       >
         <Tab.Screen name="MemberList" component={MemberListScreen} />
-        <Tab.Screen name="MainPage" component={MainPageScreen} />
+        <Tab.Screen name="MainPage" component={MainPageStackScreen} />
         <Tab.Screen name="MyPage" component={MyPageScreen} />
       </Tab.Navigator>
     </NavigationContainer>
