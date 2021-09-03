@@ -9,32 +9,36 @@ import MemberListScreen from './src/screens/MemberListScreen';
 import MainPageScreen from './src/screens/MainPageScreen';
 import MyPageScreen from './src/screens/MyPageScreen';
 
+import MyPageStackScreen from './src/screens/StackScrenn';
+
 const Tab = createBottomTabNavigator();
 export default function App() {
+  const TabNatigation = ({ route }) => ({
+    tabBarIcon: ({ focused, color, size }) => {
+      let iconName;
+      if (route.name === 'MemberList') {
+        iconName = focused ? 'bandage' : 'bandage-outline';
+      } else if (route.name === 'MainPage') {
+        iconName = focused ? 'home' : 'home-outline';
+      } else if (route.name === 'MyPage') {
+        iconName = focused ? 'body' : 'body-outline';
+      }
+      return <Ionicons name={iconName} size={size} color={color} />;
+    },
+    tabBarActiveTintColor: 'tomato',
+    tabBarInactiveTintColor: 'gray',
+  });
+
   return (
     <NavigationContainer>
+      <MyPageStackScreen />
       <Tab.Navigator
-        screenOptions={({ route }) => ({
-          tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            if (route.name === 'MemberList') {
-              iconName = focused ? 'bandage' : 'bandage-outline';
-            } else if (route.name === 'MainPage') {
-              iconName = focused ? 'home' : 'home-outline';
-            } else if (route.name === 'MyPage') {
-              iconName = focused ? 'body' : 'body-outline';
-            }
-            return <Ionicons name={iconName} size={size} color={color} />;
-          },
-        })}
-        tabBarOptions={{
-          activeTintColor: 'tomato',
-          inactiveTintColor: 'gray',
-        }}
+        initialRouteName="MainPage"
+        screenOptions={TabNatigation}
       >
-        <Tab.Screen name="MemberList" component={MemberListScreen} />
-        <Tab.Screen name="MainPage" component={MainPageScreen} />
-        <Tab.Screen name="MyPage" component={MyPageScreen} />
+        <Tab.Screen name="MemberList" component={MemberListStackScreen} />
+        <Tab.Screen name="MainPage" component={MainPageStackScreen} />
+        <Tab.Screen name="MyPage" component={MyPageStackScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
