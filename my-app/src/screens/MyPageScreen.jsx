@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, StyleSheet, Text, Image, TextInput,
+  View, StyleSheet, Text, Image, TextInput, Alert,
 } from 'react-native';
 
 import CircleButton from '../components/CircleButton';
@@ -9,6 +9,9 @@ const face = require('../../assets/face.jpg');
 
 export default function MyPageScreen(props) {
   const { navigation } = props;
+  const handlePress = () => {
+    Alert.alert('タスク編集画面が押されました');
+  };
   return (
     <View style={styles.container}>
       <View>
@@ -18,7 +21,7 @@ export default function MyPageScreen(props) {
         />
         <Text style={styles.name}>永山 潤</Text>
         <View style={styles.myTask}>
-          <TextInput>マイタスク</TextInput>
+          <Text>マイタスク</Text>
           <CircleButton
             name="check-square"
             style={{
@@ -28,6 +31,7 @@ export default function MyPageScreen(props) {
               height: 40,
               backgroundColor: '#DDDEE0',
             }}
+            onPress={handlePress}
           />
         </View>
       </View>

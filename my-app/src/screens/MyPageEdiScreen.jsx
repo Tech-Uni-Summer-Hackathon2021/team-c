@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View, StyleSheet, Text, Image, TextInput,
 } from 'react-native';
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import firebase from 'firebase';
 import LogOutButton from '../components/LogOutButton';
 
 const face = require('../../assets/face.jpg');

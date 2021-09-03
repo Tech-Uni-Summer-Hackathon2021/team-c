@@ -17,7 +17,7 @@ export default function SignUpScreen(props) {
         console.log(user.uid);
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Page1' }],
+          routes: [{ name: 'MainPage' }],
         });
       })
       .catch((error) => {

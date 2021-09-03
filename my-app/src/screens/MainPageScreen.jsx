@@ -95,6 +95,14 @@ export default function MainPageScreen() {
         }}
         onPress={() => { Alert.alert('aaaaa'); }}
       />
+      <CircleButton
+        name="edit"
+        style={{
+          right: 60,
+          top: 250,
+        }}
+        onPress={() => { Alert.alert('タスク編集をします'); }}
+      />
     </View>
   );
 }
