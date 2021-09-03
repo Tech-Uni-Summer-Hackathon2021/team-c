@@ -11,27 +11,27 @@ import MyPageStackScreen from './src/screens/MyPageStackScrenn';
 
 const Tab = createBottomTabNavigator();
 export default function App() {
-  const TabNatigation = ({ route }) => ({
-    tabBarIcon: ({ focused, color, size }) => {
-      let iconName;
-      if (route.name === 'MemberList') {
-        iconName = focused ? 'bandage' : 'bandage-outline';
-      } else if (route.name === 'MainPage') {
-        iconName = focused ? 'home' : 'home-outline';
-      } else if (route.name === 'MyPage') {
-        iconName = focused ? 'body' : 'body-outline';
-      }
-      return <Ionicons name={iconName} size={size} color={color} />;
-    },
-    tabBarActiveTintColor: 'tomato',
-    tabBarInactiveTintColor: 'gray',
-  });
-
   return (
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="MainPage"
-        screenOptions={TabNatigation}
+        screenOptions={
+            ({ route }) => ({
+              tabBarIcon: ({ focused, color, size }) => {
+                let iconName;
+                if (route.name === 'MemberList') {
+                  iconName = focused ? 'bandage' : 'bandage-outline';
+                } else if (route.name === 'MainPage') {
+                  iconName = focused ? 'home' : 'home-outline';
+                } else if (route.name === 'MyPage') {
+                  iconName = focused ? 'body' : 'body-outline';
+                }
+                return <Ionicons name={iconName} size={size} color={color} />;
+              },
+              tabBarActiveTintColor: 'skyblue',
+              tabBarInactiveTintColor: 'gray',
+            })
+          }
       >
         <Tab.Screen name="MemberList" component={MemberListScreen} />
         <Tab.Screen name="MainPage" component={MainPageStackScreen} />
