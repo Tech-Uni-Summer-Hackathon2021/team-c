@@ -2,30 +2,33 @@ import React from 'react';
 import {
   View, StyleSheet, Text, Image, TextInput,
 } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign, EvilIcons } from '@expo/vector-icons';
 
 const face = require('../../assets/face.jpg');
 
-export default function MyPageScreen(props) {
+export default function MyPageEditScreen(props) {
   const { navigation } = props;
   return (
     <View style={styles.container}>
-      <View style={styles.settingIcon}>
-        <AntDesign name="setting" size={50} onPress={() => navigation.navigate('MyPageEdit')} />
-      </View>
       <View>
         <Image
           source={face}
           style={styles.face}
         />
         <Text style={styles.name}>永山 潤</Text>
+        <AntDesign name="edit" size={30} />
         <View style={styles.myTask}>
           <TextInput>マイタスク</TextInput>
+        </View>
+        <EvilIcons name="check" size={30} onPress={() => { navigation.navigate('MyPage'); }} />
+        <View>
+          <Text>ログアウト</Text>
         </View>
       </View>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

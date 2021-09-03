@@ -15,7 +15,7 @@ export default function LogInScreen(props) {
       if (user) {
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Page1' }],
+          routes: [{ name: 'MainPage' }],
         });
       }
     });
@@ -30,7 +30,7 @@ export default function LogInScreen(props) {
         console.log(user.uid);
         navigation.reset({
           index: 0,
-          routes: [{ name: 'Page1' }],
+          routes: [{ name: 'MainPage' }],
         });
       })
       .catch((error) => {
