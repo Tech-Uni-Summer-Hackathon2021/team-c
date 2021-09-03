@@ -46,15 +46,10 @@ export default function MainPageScreen(props) {
           </View>
         </View>
       </View>
-      <CircleButton style={{
-        right: 50,
-        bottom: 140,
-      }}
-      />
       <CircleButton
         style={{
           right: 50,
-          bottom: 130,
+          bottom: 140,
         }}
         onPress={() => navigation.navigate('MemberProfile')}
       />
