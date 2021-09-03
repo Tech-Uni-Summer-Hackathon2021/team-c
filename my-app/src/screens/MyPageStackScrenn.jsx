@@ -4,9 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import firebase from 'firebase';
 import MyPageScreen from './MyPageScreen';
 import MainPageScreen from './MainPageScreen';
 import MemberlistScreen from './MemberListScreen';
+
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const Stack = createStackNavigator();
 
