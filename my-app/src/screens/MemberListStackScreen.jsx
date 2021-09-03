@@ -16,7 +16,13 @@ export default function MemberListStackScreen() {
     >
       <Stack.Screen name="MyPage" component={MyPageScreen} />
       <Stack.Screen name="Mainpage" component={MainPageScreen} />
-      <Stack.Screen name="MemberList" component={MemberlistScreen} />
+      <Stack.Screen
+        name="MemberList"
+        component={MemberlistScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forFadeFromBottomAndroid,
+        }}
+      />
     </Stack.Navigator>
   );
 }

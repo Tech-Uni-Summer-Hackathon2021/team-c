@@ -3,6 +3,7 @@ import {
   View, StyleSheet, Text, Image, TextInput, Alert,
 } from 'react-native';
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import LogOutButton from '../components/LogOutButton';
 
 const face = require('../../assets/face.jpg');
 
@@ -22,7 +23,7 @@ export default function MyPageEditScreen(props) {
         </View>
         <EvilIcons name="check" size={30} onPress={() => { navigation.navigate('MyPage'); }} />
         <View>
-          <Text onPress={() => { Alert.alert('ログアウトしますか？'); }}>ログアウト</Text>
+          <LogOutButton />
         </View>
       </View>
     </View>
