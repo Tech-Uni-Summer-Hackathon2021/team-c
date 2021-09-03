@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
   View, StyleSheet, Text, Image, TextInput,
 } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
+
+import CircleButton from '../components/CircleButton';
 
 const face = require('../../assets/face.jpg');
 
@@ -10,9 +11,6 @@ export default function MyPageScreen(props) {
   const { navigation } = props;
   return (
     <View style={styles.container}>
-      <View style={styles.settingIcon}>
-        <AntDesign name="setting" size={50} onPress={() => navigation.navigate('MyPageEdit')} />
-      </View>
       <View>
         <Image
           source={face}
@@ -21,8 +19,26 @@ export default function MyPageScreen(props) {
         <Text style={styles.name}>永山 潤</Text>
         <View style={styles.myTask}>
           <TextInput>マイタスク</TextInput>
+          <CircleButton
+            name="check-square"
+            style={{
+              right: 5,
+              top: 155,
+              width: 40,
+              height: 40,
+              backgroundColor: '#DDDEE0',
+            }}
+          />
         </View>
       </View>
+      <CircleButton
+        name="settings"
+        style={{
+          right: 10,
+          top: 15,
+        }}
+        onPress={() => { navigation.navigate('MyPageEdit'); }}
+      />
     </View>
   );
 }
@@ -34,13 +50,6 @@ const styles = StyleSheet.create({
     paddingBottom: 300,
     paddingTop: 270,
     alignItems: 'center',
-  },
-  settingIcon: {
-    position: 'absolute',
-    paddingLeft: 150,
-    paddingBottom: 50,
-    top: 45,
-    right: 89,
   },
   face: {
     width: 130,

@@ -3,12 +3,12 @@ import {
   View,
   StyleSheet,
   Text,
+  Alert,
 } from 'react-native';
 
 import CircleButton from '../components/CircleButton';
 
-export default function MainPageScreen(props) {
-  const { navigation } = props;
+export default function MainPageScreen() {
   return (
     <View style={styles.container}>
       <View>
@@ -37,8 +37,16 @@ export default function MainPageScreen(props) {
             <View>
               <Text style={styles.clock}>21:00</Text>
             </View>
-            <Text style={styles.taskToday}>環境構築</Text>
+            <Text style={styles.taskToday}>今日のタスク</Text>
             <Text style={styles.timeLimit}>00:00:00</Text>
+          </View>
+          <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+            <Text style={styles.thirPant}> </Text>
+            <Text style={styles.sixPant}> </Text>
+            <Text style={styles.sixPant}> </Text>
+            <Text style={styles.sixPant}> </Text>
+            <Text style={styles.sixPant}> </Text>
+            <Text style={styles.ninPant}> </Text>
           </View>
           <View style={{ flexDirection: 'row' }}>
             <Text style={styles.zeroPasent}>0%</Text>
@@ -51,42 +59,41 @@ export default function MainPageScreen(props) {
           right: 50,
           bottom: 140,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
       />
       <CircleButton
         style={{
           right: 110,
           bottom: 140,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
+        onPress={() => { Alert.alert('aaaaa'); }}
       />
       <CircleButton
         style={{
           right: 170,
           bottom: 140,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
+        onPress={() => { Alert.alert('aaaaa'); }}
       />
       <CircleButton
         style={{
           left: 50,
           top: 175,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
+        onPress={() => { Alert.alert('aaaaa'); }}
       />
       <CircleButton
         style={{
           left: 110,
           top: 175,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
+        onPress={() => { Alert.alert('aaaaa'); }}
       />
       <CircleButton
         style={{
           left: 170,
           top: 175,
         }}
-        onPress={() => navigation.navigate('MemberProfile')}
+        onPress={() => { Alert.alert('aaaaa'); }}
       />
     </View>
   );
@@ -167,11 +174,23 @@ const styles = StyleSheet.create({
     height: 250,
     width: 300,
   },
-  grad: {
-    width: '100%',
-    textAlign: 'center',
-    padding: 10,
-    color: '#fff',
+  thirPant: {
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    backgroundColor: '#C0C0C0C0',
+    borderRadius: 5,
+  },
+  sixPant: {
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    backgroundColor: '#00B7DF33',
+    borderRadius: 5,
+  },
+  ninPant: {
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    backgroundColor: '#00B7DF33',
+    borderRadius: 5,
   },
 
 });
