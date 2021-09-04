@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   StyleSheet,
   Text,
-  Alert,
+  TextInput,
+  Date,
 } from 'react-native';
+import firebase from 'firebase';
 
 import CircleButton from '../components/CircleButton';
+import { NavigationContainer } from '@react-navigation/native';
 
-export default function MainPageScreen() {
+export default function MainPageScreen(props) {
+  const { navigation } = props;
+  const [taskText, setTaskText] = useState('');
+  const hundlePress = () => {
+    const { currentUser } = firebase.auth();
+    const db = firebase.firestore();
+    const ref = db.collection(`users/${currentUser.uid}/teamTask`);
+    ref.add({
+      taskText,
+    })
+      .then((docRef) => {
+        console.log('Created!', docRef.taskText);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -31,13 +51,17 @@ export default function MainPageScreen() {
           <View style={{ alignItems: 'center' }}>
             <Text style={styles.year}>2021</Text>
             <View style={{ flexDirection: 'row' }}>
-              <Text style={styles.date}>8/13</Text>
+              <Text style={styles.date}>00：00：00</Text>
               <Text style={styles.dayOfWeek}>(Fri.)</Text>
             </View>
             <View>
               <Text style={styles.clock}>21:00</Text>
             </View>
-            <Text style={styles.taskToday}>今日のタスク</Text>
+            <TextInput
+              style={styles.taskToday}
+              value={taskText}
+              onChangeText={(text) => { setTaskText(text); }}
+            />
             <Text style={styles.timeLimit}>00:00:00</Text>
           </View>
           <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
@@ -59,41 +83,46 @@ export default function MainPageScreen() {
           right: 50,
           bottom: 140,
         }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         style={{
           right: 110,
           bottom: 140,
+          backgroundColor: '#EE6363',
         }}
-        onPress={() => { Alert.alert('aaaaa'); }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         style={{
           right: 170,
           bottom: 140,
+          backgroundColor: '#FFEC8B',
         }}
-        onPress={() => { Alert.alert('aaaaa'); }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         style={{
           left: 50,
           top: 175,
+          backgroundColor: '#8B658B',
         }}
-        onPress={() => { Alert.alert('aaaaa'); }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         style={{
           left: 110,
           top: 175,
+          backgroundColor: '#90EE90',
         }}
-        onPress={() => { Alert.alert('aaaaa'); }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         style={{
           left: 170,
           top: 175,
         }}
-        onPress={() => { Alert.alert('aaaaa'); }}
+        onPress={() => { navigation.navigate('MyPage'); }}
       />
       <CircleButton
         name="edit"
@@ -101,7 +130,7 @@ export default function MainPageScreen() {
           right: 60,
           top: 250,
         }}
-        onPress={() => { Alert.alert('タスク編集をします'); }}
+        onPress={hundlePress}
       />
     </View>
   );

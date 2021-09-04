@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-  View, StyleSheet, Text, Image, TextInput,
+  View, StyleSheet, Image, TextInput,
 } from 'react-native';
-import { AntDesign, EvilIcons } from '@expo/vector-icons';
+import { EvilIcons } from '@expo/vector-icons';
 import firebase from 'firebase';
 import LogOutButton from '../components/LogOutButton';
 
@@ -10,6 +10,23 @@ const face = require('../../assets/face.jpg');
 
 export default function MyPageEditScreen(props) {
   const { navigation } = props;
+  const [nameText, setNameText] = useState('');
+
+  const handlePress = () => {
+    const { currentUser } = firebase.auth();
+    const db = firebase.firestore();
+    const ref = db.collection(`users/${currentUser.uid}/name`);
+    ref.add({
+      nameText,
+    })
+      .then((docRef) => {
+        console.log('Created!', docRef.name);
+        navigation.navigate('MyPage');
+      })
+      .catch((error) => {
+        console.log('Error', error);
+      });
+  };
   return (
     <View style={styles.container}>
       <View style={styles.LogOut}>
@@ -22,8 +39,14 @@ export default function MyPageEditScreen(props) {
             style={styles.face}
           />
           <View style={styles.nameBox}>
-            <Text style={styles.name}>永山 潤</Text>
-            <AntDesign name="edit" size={27} style={styles.nameEditIcon} />
+            <TextInput
+              editable
+              value={nameText}
+              style={styles.name}
+              onChangeText={(text) => { setNameText(text); }}
+              autoCapitalize="none"
+              keyboardType="email-address"
+            />
           </View>
           <View style={styles.myTask}>
             <TextInput>マイタスク</TextInput>
@@ -32,7 +55,7 @@ export default function MyPageEditScreen(props) {
             name="check"
             size={50}
             style={styles.checkIcon}
-            onPress={() => { navigation.navigate('MyPage'); }}
+            onPress={handlePress}
           />
         </View>
       </View>
@@ -65,18 +88,17 @@ const styles = StyleSheet.create({
   },
   nameBox: {
     flexDirection: 'row',
-  },
-  nameEditIcon: {
-    position: 'absolute',
-    right: 35,
-    paddingTop: 9,
+    borderColor: 'gray',
+    borderWidth: 1,
+    height: 50,
+    paddingHorizontal: 4,
+    fontSize: 35,
   },
   name: {
     fontSize: 35,
-    left: 65,
   },
   myTask: {
-    marginTop: 40,
+    marginTop: 30,
     height: 200,
     width: 250,
     backgroundColor: '#DDDEE0',
