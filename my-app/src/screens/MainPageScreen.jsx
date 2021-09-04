@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import {
   View,
   StyleSheet,
   Text,
   TextInput,
-  Date,
+  RefreshControl,
+  ScrollView,
 } from 'react-native';
 import firebase from 'firebase';
 
 import CircleButton from '../components/CircleButton';
-import { NavigationContainer } from '@react-navigation/native';
 
 export default function MainPageScreen(props) {
   const { navigation } = props;
@@ -17,8 +17,10 @@ export default function MainPageScreen(props) {
   const hundlePress = () => {
     const { currentUser } = firebase.auth();
     const db = firebase.firestore();
-    const ref = db.collection(`users/${currentUser.uid}/teamTask`);
-    ref.add({
+    const ref = db.collection(`users/${currentUser.uid}/teamTask/`);
+    const dataText = ref.doc('qPCM3RpCdR9UxNyfyJDa').get();
+    console.log(dataText);
+    ref.doc('qPCM3RpCdR9UxNyfyJDa').update({
       taskText,
     })
       .then((docRef) => {
@@ -29,110 +31,145 @@ export default function MainPageScreen(props) {
       });
   };
 
+  const sleep = (msec) => new Promise((resolve) => setTimeout(resolve, msec));
+  const [refreshing, setRefreshing] = useState(false);
+  const date = new Date();
+  const year = date.getFullYear();
+  const mounth = date.getMonth() + 1;
+  const day = date.getDate();
+  const hour = date.getHours();
+  const minutes = date.getMinutes();
+  const dayOfWeek = date.getDay();
+  const dayOfWeekList = ['(Sun.)', '(Mon.)', '(Tus.)', '(Wed.)', '(Thu.)', '(Fri.)', '(Sat.)'];
+  const label = dayOfWeekList[dayOfWeek];
+  const totalTime = 10000;
+  const oldTime = Date.now();
+
+  const timerId = setInterval(() => {
+    const currentTime = Date.now();
+    const diff = currentTime - oldTime;
+
+    const remainMSec = totalTime - diff;
+    const remainSec = Math.ceil(remainMSec / 1000);
+  });
+  const anyFunction = useCallback(async () => {
+    setRefreshing(true);
+    // 非同期処理(実際にはここでデータの更新を行う)
+    await sleep(1000);
+    setRefreshing(false);
+  }, []);
+
   return (
     <View style={styles.container}>
-      <View>
-        <View style={styles.topLine}>
-          <Text>ー</Text>
+      <ScrollView
+        refreshControl={
+          <RefreshControl refreshing={refreshing} onRefresh={anyFunction} />
+        }
+      >
+        <View>
+          <View style={styles.topLine}>
+            <Text>ー</Text>
+          </View>
+          <Text style={styles.topHome}>ホーム</Text>
+          <View style={[{
+            transform: [
+              { rotateY: '50deg' },
+              { rotateZ: '-20deg' },
+            ],
+          }]}
+          >
+            <Text style={styles.backHome}>Home</Text>
+          </View>
         </View>
-        <Text style={styles.topHome}>ホーム</Text>
-        <View style={[{
-          transform: [
-            { rotateY: '50deg' },
-            { rotateZ: '-20deg' },
-          ],
-        }]}
-        >
-          <Text style={styles.backHome}>Home</Text>
-        </View>
-      </View>
-      <View>
-        <View style={styles.taskContent}>
-          <View style={{ alignItems: 'center' }}>
-            <Text style={styles.year}>2021</Text>
+        <View>
+          <View style={styles.taskContent}>
+            <View style={{ alignItems: 'center' }}>
+              <Text style={styles.year}>{year}</Text>
+              <View style={{ flexDirection: 'row' }}>
+                <Text style={styles.date}>{mounth}/{day}</Text>
+                <Text style={styles.dayOfWeek}>{label}</Text>
+              </View>
+              <View>
+                <Text style={styles.clock}>{hour}:{minutes}</Text>
+              </View>
+              <TextInput
+                style={styles.taskToday}
+                value={taskText}
+                onChangeText={(text) => { setTaskText(text); }}
+                autoCapitalize="none"
+              />
+              <Text style={styles.timeLimit}>{timerId}</Text>
+            </View>
+            <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
+              <Text style={styles.thirPant}> </Text>
+              <Text style={styles.sixPant}> </Text>
+              <Text style={styles.sixPant}> </Text>
+              <Text style={styles.sixPant}> </Text>
+              <Text style={styles.sixPant}> </Text>
+              <Text style={styles.ninPant}> </Text>
+            </View>
             <View style={{ flexDirection: 'row' }}>
-              <Text style={styles.date}>00：00：00</Text>
-              <Text style={styles.dayOfWeek}>(Fri.)</Text>
+              <Text style={styles.zeroPasent}>0%</Text>
+              <Text style={styles.oneHunPasent}>100%</Text>
             </View>
-            <View>
-              <Text style={styles.clock}>21:00</Text>
-            </View>
-            <TextInput
-              style={styles.taskToday}
-              value={taskText}
-              onChangeText={(text) => { setTaskText(text); }}
-            />
-            <Text style={styles.timeLimit}>00:00:00</Text>
-          </View>
-          <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-            <Text style={styles.thirPant}> </Text>
-            <Text style={styles.sixPant}> </Text>
-            <Text style={styles.sixPant}> </Text>
-            <Text style={styles.sixPant}> </Text>
-            <Text style={styles.sixPant}> </Text>
-            <Text style={styles.ninPant}> </Text>
-          </View>
-          <View style={{ flexDirection: 'row' }}>
-            <Text style={styles.zeroPasent}>0%</Text>
-            <Text style={styles.oneHunPasent}>100%</Text>
           </View>
         </View>
-      </View>
-      <CircleButton
-        style={{
-          right: 50,
-          bottom: 140,
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        style={{
-          right: 110,
-          bottom: 140,
-          backgroundColor: '#EE6363',
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        style={{
-          right: 170,
-          bottom: 140,
-          backgroundColor: '#FFEC8B',
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        style={{
-          left: 50,
-          top: 175,
-          backgroundColor: '#8B658B',
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        style={{
-          left: 110,
-          top: 175,
-          backgroundColor: '#90EE90',
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        style={{
-          left: 170,
-          top: 175,
-        }}
-        onPress={() => { navigation.navigate('MyPage'); }}
-      />
-      <CircleButton
-        name="edit"
-        style={{
-          right: 60,
-          top: 250,
-        }}
-        onPress={hundlePress}
-      />
+        <CircleButton
+          style={{
+            left: 0,
+            bottom: 125,
+          }}
+        />
+        <CircleButton
+          style={{
+            left: 60,
+            bottom: 125,
+          }}
+          onPress={() => { navigation.navigate('MyPage'); }}
+        />
+        <CircleButton
+          style={{
+            left: 120,
+            bottom: 125,
+            backgroundColor: '#90EE90',
+          }}
+          onPress={() => { navigation.navigate('MyPage'); }}
+        />
+        <CircleButton
+          style={{
+            right: 0,
+            top: 473,
+            backgroundColor: '#EE6363',
+          }}
+          onPress={() => { navigation.navigate('MyPage'); }}
+        />
+        <CircleButton
+          style={{
+            right: 60,
+            top: 473,
+            backgroundColor: '#FFEC8B',
+          }}
+          onPress={() => { navigation.navigate('MyPage'); }}
+        />
+        <CircleButton
+          style={{
+            right: 120,
+            top: 473,
+            backgroundColor: '#8B658B',
+          }}
+          onPress={() => { navigation.navigate('MyPage'); }}
+        />
+        <CircleButton
+          name="edit"
+          style={{
+            right: 5,
+            top: 415,
+          }}
+          onPress={() => {hundlePress}}
+        />
+      </ScrollView>
     </View>
+
   );
 }
 const styles = StyleSheet.create({
@@ -165,21 +202,21 @@ const styles = StyleSheet.create({
   backHome: {
     fontStyle: 'italic',
     color: '#AECED9CC',
-    bottom: 250,
-    right: 130,
-    fontSize: 30,
+    bottom: 55,
+    right: 65,
+    fontSize: 40,
     opacity: 0.7,
   },
   topHome: {
     position: 'absolute',
-    bottom: 190,
-    right: 130,
-    fontSize: 20,
+    bottom: -5,
+    left: 0,
+    fontSize: 25,
     flexDirection: 'row',
   },
   topLine: {
     position: 'absolute',
-    bottom: 180,
+    bottom: -10,
     fontSize: 20,
     flexDirection: 'row',
     borderBottomWidth: 1,
@@ -200,6 +237,7 @@ const styles = StyleSheet.create({
     left: 220,
   },
   taskContent: {
+    top: 150,
     flexDirection: 'column',
     paddingTop: 10,
     paddingLeft: 10,
@@ -208,7 +246,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#DDDEE0',
     borderWidth: 1,
     borderRadius: 2,
-    height: 250,
+    height: 270,
     width: 300,
   },
   thirPant: {
